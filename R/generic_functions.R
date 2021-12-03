@@ -93,6 +93,7 @@ plot.loamobject <- function(x, ...) {
            y = ifelse(k > 1, expression(italic(y[ijk] - bar(y)[i..])), expression(italic(y[ij] - bar(y)[i.]))),
            title = "Agreement plot",
            subtitle = paste0("LOAM +/- ", fm(x$estimates$LOAM), "   ", x$CI*100, "% CI: (", fm(ci[1]),", ",fm(ci[2]),")"),
-           shape = "Observer")
+           shape = "Observer") +
+      ylim(-20, 20) 
   }
 }
