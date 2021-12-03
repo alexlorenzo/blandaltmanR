@@ -59,10 +59,10 @@ plot.loamobject <- function(x, ...) {
       ggplot(aes(x = .data$subjectMean, y = .data$centered, shape = as.factor(.data$observer))) +
       scale_shape_manual(values = 0:(b-1)) +
       geom_vline(aes(xintercept = .data$subjectMean), alpha = 0.1) +
-      geom_hline(yintercept =  x$estimates$LOAM, color = "#1f78b4", linetype = "dashed")+
-      geom_hline(yintercept = -x$estimates$LOAM, color = "#1f78b4", linetype = "dashed")+
-      annotate("rect", ymin = ci[1],  ymax =  ci[2], xmin = -Inf, xmax = Inf, alpha = 0.2, fill = "#1f78b4") +
-      annotate("rect", ymin = -ci[1], ymax = -ci[2], xmin = -Inf, xmax = Inf, alpha = 0.2, fill = "#1f78b4") +
+      geom_hline(yintercept =  x$estimates$LOAM, color = "#FF0000", linetype = "dashed")+
+      geom_hline(yintercept = -x$estimates$LOAM, color = "#FF0000", linetype = "dashed")+
+      # annotate("rect", ymin = ci[1],  ymax =  ci[2], xmin = -Inf, xmax = Inf, alpha = 0.2, fill = "#1f78b4") +
+      # annotate("rect", ymin = -ci[1], ymax = -ci[2], xmin = -Inf, xmax = Inf, alpha = 0.2, fill = "#1f78b4") +
       geom_point(size = 2, ...) +
       theme_bw() + theme(panel.grid.major = element_blank(),
                          panel.grid.minor = element_blank()) +
@@ -80,10 +80,10 @@ plot.loamobject <- function(x, ...) {
       mutate(centered = .data$value - .data$subjectMean) %>%
       ggplot(aes(x = .data$subjectMean, y = .data$centered)) +
       geom_vline(aes(xintercept = .data$subjectMean), alpha=0.1) +
-      geom_hline(yintercept =  x$estimates$LOAM, color = "#1f78b4", linetype = "dashed")+
-      geom_hline(yintercept = -x$estimates$LOAM, color = "#1f78b4", linetype = "dashed")+
-      annotate("rect", ymin = ci[1],  ymax =  ci[2], xmin = -Inf, xmax = Inf, alpha = 0.2, fill = "#1f78b4") +
-      annotate("rect", ymin = -ci[1], ymax = -ci[2], xmin = -Inf, xmax = Inf, alpha = 0.2, fill = "#1f78b4") +
+      geom_hline(yintercept =  x$estimates$LOAM, color = "#FF0000", linetype = "dashed")+
+      geom_hline(yintercept = -x$estimates$LOAM, color = "#FF0000", linetype = "dashed")+
+      # annotate("rect", ymin = ci[1],  ymax =  ci[2], xmin = -Inf, xmax = Inf, alpha = 0.2, fill = "#1f78b4") +
+      # annotate("rect", ymin = -ci[1], ymax = -ci[2], xmin = -Inf, xmax = Inf, alpha = 0.2, fill = "#1f78b4") +
       geom_point(size = 2, alpha = 0.5, ...) +
       theme_bw() + theme(panel.grid.major = element_blank(),
                          panel.grid.minor = element_blank()) +
