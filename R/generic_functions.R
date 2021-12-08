@@ -63,7 +63,7 @@ plot.loamobject <- function(x, ...) {
       geom_hline(yintercept = -x$estimates$LOAM, color = "#4682B4", linetype = "dashed")+
       # annotate("rect", ymin = ci[1],  ymax =  ci[2], xmin = -Inf, xmax = Inf, alpha = 0.2, fill = "#1f78b4") +
       # annotate("rect", ymin = -ci[1], ymax = -ci[2], xmin = -Inf, xmax = Inf, alpha = 0.2, fill = "#1f78b4") +
-      ylim(-20, 20) +
+      ylim(-10, 10) +
       geom_point(size = 2, ...) +
       theme_bw() + theme(panel.grid.major = element_blank(),
                          panel.grid.minor = element_blank()) +
@@ -85,7 +85,7 @@ plot.loamobject <- function(x, ...) {
       geom_hline(yintercept = -x$estimates$LOAM, color = "#4682B4", linetype = "dashed")+
       # annotate("rect", ymin = ci[1],  ymax =  ci[2], xmin = -Inf, xmax = Inf, alpha = 0.2, fill = "#1f78b4") +
       # annotate("rect", ymin = -ci[1], ymax = -ci[2], xmin = -Inf, xmax = Inf, alpha = 0.2, fill = "#1f78b4") +
-      ylim(-20, 20) +
+      ylim(-10, 10) +
       geom_point(size = 2, alpha = 0.5, ...) +
       theme_bw() + theme(panel.grid.major = element_blank(),
                          panel.grid.minor = element_blank()) +
